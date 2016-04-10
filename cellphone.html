@@ -8,7 +8,17 @@
   <meta name="author" content="Misook Sohn">
   <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
 <style>
+.body{
+	width:80%;
+	overflow: auto;
+    margin: auto;
+}
+#header{
 
+    font-family: "Open Sans", Arial, sans-serif;
+    text-align: left;
+    padding:20px;
+}
 nav ul {
     list-style-type: none;
    /*margin-top: -20px;
@@ -72,10 +82,15 @@ nav .dropdown:hover .dropdown-content {
     z-index:100;
 }
 
-.img {
+.pagebanner img{
+	width: 100%;
+	height: 400px;
+}
 
+.img {
+	float:left;
     width: 100%;
-    height:250px;
+    height:150px;
     position: relative;
     display: block;
     padding: 20px 20px 20px 30px;
@@ -91,7 +106,7 @@ nav .dropdown:hover .dropdown-content {
 .img img {
   float:left;
   width:auto;
-  height: 200px;
+  height: 150px;
   padding: 10px
 
 }
@@ -145,7 +160,9 @@ nav .dropdown:hover .dropdown-content {
 </head>
 
 <body class="body">
-
+<hearder id=header>
+	<h1>BEST Electronics</h1>
+</hearder>
   <nav><ul>
     <li><a href="">Home</a></li>
     <li><a href="">About</a></li>
@@ -160,6 +177,10 @@ nav .dropdown:hover .dropdown-content {
     <li><a href="">Contact</a></li>
   </nav></ul>   
 
+  <div class ="pagebanner">
+  	<!-- <h1 class="title-banner">Cellphones</h1> -->
+  	<img src="img/cellphone_banner.jpg" alt="cellphone_banner" >
+  </div>
   <div class="section"> 
 
   <header>
@@ -168,12 +189,10 @@ nav .dropdown:hover .dropdown-content {
   </header>
 
   <div class="img">
-
     <img src="img/cp1.jpg" alt="cellphone1" >
-
     <div class="desc">
       <h4 class="title-heading">
-      <a href="">T-Mobile Samsung Prepaid Galaxy Core Prime Smartphone</a>
+     	 <a href="">T-Mobile Samsung Prepaid Galaxy Core Prime Smartphone</a>
       </h4>
       <div class="title-content"> 
         <h2>$120.00</h2>
@@ -184,11 +203,18 @@ nav .dropdown:hover .dropdown-content {
     </div>
 </div>
 
-<div class="img">
-  <img src="img/cp2.jpg" alt="cellphone2" >
+ <div class="img">
+    <img src="img/cp2.jpg" alt="cellphone1" >
     <div class="desc">
-      <h3>$120.00</h3>
-      <p>Add a description of the image here</p>
+      <h4 class="title-heading">
+     	 <a href="">T-Mobile Samsung Prepaid Galaxy Core Prime Smartphone</a>
+      </h4>
+      <div class="title-content"> 
+        <h2>$120.00</h2>
+        <p>4G LTE network
+          Android 5.1 (Lollipop) OS
+          Talk Time: up to 14.8 hours</p>
+      </div>
     </div>
 </div>
 
