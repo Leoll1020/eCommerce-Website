@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+
+		<title> Product Details </title>
+		<meta charset = "utf-8">
+		<meta name = "Description", content = "Product Details">
+		<meta name = "keywords", content = "IMAGE, PRICE, INFO">
+		<meta name = "author", content = "Jessica Zeng">
+		<style>
+		div.header{
+			
+			background-color: #F72F54;
+			color:white;
+			padding:20px;
+			width:100%;
+			margin-right: auto;
+  			margin-left: auto;
+  			*zoom: 1;
+  			-webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+			}
+		div.companyname{
+			border-style: dotted;
+			color: #ffffff;
+			font-style: normal;
+			font-weight:bolder;
+			font-variant: normal;
+			float: left;
+            font: 700 44px/44px 'Open Sans', sans-serif;
+  
+			}
+		div.span_d{
+			border-style: solid;
+			border-color: green;
+			font: 24px/24px 'Marvel', sans-serif;
+		}
+
+		div.navi{
+			border-style: solid;
+			border-color:purple;
+			float: right;
+			display: block;
+		}
+		div.row1{
+			border-style: solid;
+			border-color:blue;
+		}
+		div.grid_12{
+			border-style: solid;
+			border-color:yellow;
+			width: 1170px;
+		}
+		.menu {
+  			width: 100%;
+  			text-align: center;
+  			line-height: 20px;
+  			margin-top: auto;
+  			margin-top: 32px;
+		}
+		.menu > li {
+  			display: inline-block;
+  			position: relative;
+  			padding: 0;
+  			margin: 0;
+		}
+		.menu > li > a {
+  			color: #7d261a;
+  			font-size: 27px;
+  			margin-left: 89px;
+  			font-family: 'Marvel', sans-serif;
+  			margin-bottom: 30px;
+  			position: relative;
+		}
+		.menu > li > a:hover {
+  			color: #ffffff;
+		}
+
+		.menu > li > a:hover:after {
+  		content: "";
+  		height: 4px;
+  		width: 100%;
+ 		background: #dbb3ae;
+  		position: absolute;
+  		bottom: -30px;
+  		left: 0;
+		}
+		.menu > li:first-child {
+  			padding-right: 0;
+		}
+		.menu > li.current > a {
+  			color: #ffffff;
+		}
+		.menu > li.current > a:after {
+  			content: "";
+  			height: 4px;
+  			width: 100%;
+  			background: #dbb3ae;
+  			position: absolute;
+  			bottom: -30px;
+  			left: 0;
+		}
+		
+		.body {
+			border-style: solid;
+  			background: #fff;
+  			font: 14px/24px Georgia, 'Times New Roman', Times, serif;
+		}	
+		
+		#row2{
+
+			border-style:solid;
+			border-color: red;
+			height:50px;
+			width:100%;
+		}
+		 #row2 > ul >li{
+	    	display: inline-block;
+			line-height: 20px;
+	    	font-color:blue;
+	    	font-size: 25px;
+	    }
+		#row3{
+			height:600px;
+			width:100%;
+		}
+		#picture {
+			border-style: solid;
+			margin-left: 20px;
+			margin-right: 10px;
+			border-color:green;
+    		width:500px;
+    		height:600px;
+    		float:left;   		 
+		}
+
+		#info{
+			border:solid;
+			border-color:green;
+    		width: 600px;
+    		margin-left: 20px;
+			margin-right: 10px;
+    		height:600px;
+    		float:right;   		 
+		}
+		#info > #col2 >h3{
+			border:solid blue;
+			font-family: sans-serif;
+			font-color: black;
+			font-size:200%;
+			float:center;
+			margin: 10px 10px 10px 50px;
+
+		}
+		#buy{
+			margin: 10px 10px 10px 50px;
+			float:center;
+		}
+	    #details{
+	    	border:solid red;
+	    	font-family: sans-serif;
+	    	float:center;
+	    	margin: 10px 10px 10px 50px;
+	    	font-color: black;
+
+	    }
+	    #feature_title{
+	    	border:solid red;
+	    	font-family: sans-serif;
+	    	float:center;
+	    	font-color: black;
+	    	margin:10px 10px 10px 50px;
+
+	    }
+	    #feature{
+	    	border-top: solid black;
+	    	font-family: sans-serif;
+	    	float:center;
+	    	font-color: black;
+	    	margin:5px 10px 5px 50px;
+
+	    }
+	    footer {
+
+    		background-color:f333;
+    		color:black;
+    		clear:both;
+    		text-align:center;
+    		float:center;
+   			padding:5px;	 	 
+	}
+		</style>
+		
+	</head>
+
+<body id ="body">
+	<div class = "header">
+		<div class="row1">
+			<div class="grid_12">
+				<h1 class=companyname> E-COMMERCE </h1>
+					<h3><span class = "span_d" >We are Best Sellers </span></h3>
+					<nav class = "navi">
+						<ul class = "menu">  
+							<li><a href = " home.html"> HOME </a></li>
+							<li> <a href = "Projets.html"> Project</a></li>
+							<li> <a href = "Business.html"> Business</a></li>							 
+						</ul>	
+					</nav>
+			</div>
+		</div>
+	</div>
+	<div id="row2">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li> > </li>
+    		<li><a href="products.html">Category</a></li>
+    		<li> > </li>
+    		<li class="active">Now</li>
+		</ul>
+
+	</div>
+	<div id = "row3">
+		<section id = "info">
+		<div id = "col2">
+			<table id = "product_detail">
+				<tr><h3>Price: 299</h3></tr>
+				<tr><h3>Free Shipping</h3></tr>
+				<tr><img id ="buy" src = "/Users/jessicazeng1127/137/product_detials/img/buy.jpg" alt = "buy now" style = "width:170px;height:80px;"></tr>
+				<tr><p id = "details"> 4.7-inch Retina HD display with 3D Touch. 7000 series aluminum and stronger cover glass. An A9 chip with 64-bit desktop-class architecture. All new 12MP iSight camera with Live Photos. Touch ID. Faster LTE and Wi-Fi. Long battery life and iOS 9 and iCloud. All in a smooth, continuous unibody design.</p>
+				</tr>
+				<tr><h4 id = "feature_title">Product Features</h4></tr>
+				<div id ="feature">
+					<p> 4.7-inch (diagonal) Retina HD display with 1334-by-750 resolution</p>
+					<p> 3D Touch</p>
+					<p>A9 chip with M9 motion coprocessor</p>
+					<p>12MP iSight camera with Focus Pixels, True Tone flash and Live Photos</p>
+					<p>4K video recording at 30 fps and slo-mo video recording for 1080p at 120 fps</p>
+				</div>
+			</table>
+		</div>
+		</section>
+		<section id = "picture">
+			<div id = "col1">
+			<img src= "/Users/jessicazeng1127/137/product_detials/img/iphone6s.jpg" alt = "iphone 6s" style= "width:500px;height:600px;">
+			</div>
+		</section>
+	</div>
+</body>
+	
+<footer>
+	<h5> 2016 E-BestMart.com, all rights reserved.</h5>
+</footer>
+
+
+
+</html>
