@@ -80,18 +80,17 @@ nav .dropdown:hover .dropdown-content {
     border: 1px solid #777;
 }*/
 .row img {
-  width:180px;
-  height: 150px;
+  width:148px;
+  height:150px;
   float:left;
-  width:auto;
-  
-  padding: 10px
+
+  padding-right:30px;
 
 
 }
 .desc {
     float:left;
-    margin-left:20px;
+    margin-left:50px;
     width:600px;
     height:150px;
     
