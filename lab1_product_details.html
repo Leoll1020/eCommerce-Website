@@ -8,144 +8,103 @@
 		<meta name = "keywords", content = "IMAGE, PRICE, INFO">
 		<meta name = "author", content = "Jessica Zeng">
 		<style>
-		div.header{
-			
-			background-color: #F72F54;
-			color:white;
-			padding:20px;
-			width:100%;
-			margin-right: auto;
-  			margin-left: auto;
-  			*zoom: 1;
-  			-webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
+		.body{
+			width:80%;
+			overflow: auto;
+  			margin: auto;
+		}
+		#header{
+
+    		 padding:20px;
+    		
+		}
+		#header > h1{
+			font-family: "Open Sans", Arial, sans-serif;
+			margin-left:30px;
+			 padding:20px;
+			text-align: left;
+		}
+		nav ul {
+			list-style-type: none;
+    		overflow: hidden;
+    		background-color: #333;
+    		}
+		nav li {
+    		float: left;
 			}
-		div.companyname{
-			border-style: dotted;
-			color: #ffffff;
-			font-style: normal;
-			font-weight:bolder;
-			font-variant: normal;
-			float: left;
-            font: 700 44px/44px 'Open Sans', sans-serif;
-  
-			}
-		div.span_d{
-			border-style: solid;
-			border-color: green;
-			font: 24px/24px 'Marvel', sans-serif;
-		}
-
-		div.navi{
-			border-style: solid;
-			border-color:purple;
-			float: right;
-			display: block;
-		}
-		div.row1{
-			border-style: solid;
-			border-color:blue;
-		}
-		div.grid_12{
-			border-style: solid;
-			border-color:yellow;
-			width: 1170px;
-		}
-		.menu {
-  			width: 100%;
-  			text-align: center;
-  			line-height: 20px;
-  			margin-top: auto;
-  			margin-top: 32px;
-		}
-		.menu > li {
-  			display: inline-block;
-  			position: relative;
-  			padding: 0;
-  			margin: 0;
-		}
-		.menu > li > a {
-  			color: #7d261a;
-  			font-size: 27px;
-  			margin-left: 89px;
-  			font-family: 'Marvel', sans-serif;
-  			margin-bottom: 30px;
-  			position: relative;
-		}
-		.menu > li > a:hover {
-  			color: #ffffff;
-		}
-
-		.menu > li > a:hover:after {
-  		content: "";
-  		height: 4px;
-  		width: 100%;
- 		background: #dbb3ae;
-  		position: absolute;
-  		bottom: -30px;
-  		left: 0;
-		}
-		.menu > li:first-child {
-  			padding-right: 0;
-		}
-		.menu > li.current > a {
-  			color: #ffffff;
-		}
-		.menu > li.current > a:after {
-  			content: "";
-  			height: 4px;
-  			width: 100%;
-  			background: #dbb3ae;
-  			position: absolute;
-  			bottom: -30px;
-  			left: 0;
-		}
 		
-		.body {
-			border-style: solid;
-  			background: #fff;
-  			font: 14px/24px Georgia, 'Times New Roman', Times, serif;
-		}	
-		
-		#row2{
-
-			border-style:solid;
-			border-color: red;
-			height:50px;
-			width:100%;
+		nav li a, .dropbtn {
+    		display: inline-block;
+    		color: white;
+    		text-align: center;
+    		font-family: "Open Sans", Arial, sans-serif;
+    		font-size: 25px;
+    		font-weight:bold;
+    		padding: 14px 16px;
+    		
 		}
-		 #row2 > ul >li{
+ 		nav li a:hover, .dropdown:hover .dropbtn {
+    		background-color: red;
+		}
+		nav li.dropdown {
+    		display: inline-block;
+    
+		}
+		nav .dropdown-content {
+    		display: none;
+    		position: absolute;
+   			background-color: #f9f9f9;
+    		min-width: 160px;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+		nav .dropdown-content a {
+    		color: black;
+    		padding: 12px 16px;
+    		text-decoration: none;
+    		display: block;
+    		text-align: left;
+		}
+		nav .dropdown-content a:hover {background-color: #f1f1f1;  }
+		nav .dropdown:hover .dropdown-content {
+    		display: block;
+    		overflow:visible;
+    	}
+		.pagebanner > img {
+			width: 100%;
+			height: 400px;
+		} 
+
+		#row2 > ul >li{
 	    	display: inline-block;
 			line-height: 20px;
 	    	font-color:blue;
 	    	font-size: 25px;
+	    	padding:10px;
+	    	margin-top: 45px;
+	    	margin-bottom:15px;
 	    }
+		
 		#row3{
 			height:600px;
 			width:100%;
 		}
+
 		#picture {
-			border-style: solid;
-			margin-left: 20px;
-			margin-right: 10px;
+			margin:10px 20px 20px 30px;
 			border-color:green;
-    		width:500px;
-    		height:600px;
-    		float:left;   		 
+    		width:40%;
+    		height:100%;
+    		float:center;   		 
 		}
 
 		#info{
-			border:solid;
-			border-color:green;
-    		width: 600px;
-    		margin-left: 20px;
-			margin-right: 10px;
-    		height:600px;
+    		width: 50%;
+    		margin: 10px 20px 20px 30px;
+    		height:100%;
     		float:right;   		 
 		}
-		#info > #col2 >h3{
-			border:solid blue;
+		#price,#ship{
+		
 			font-family: sans-serif;
 			font-color: black;
 			font-size:200%;
@@ -158,7 +117,7 @@
 			float:center;
 		}
 	    #details{
-	    	border:solid red;
+	    	
 	    	font-family: sans-serif;
 	    	float:center;
 	    	margin: 10px 10px 10px 50px;
@@ -166,7 +125,7 @@
 
 	    }
 	    #feature_title{
-	    	border:solid red;
+	    	
 	    	font-family: sans-serif;
 	    	float:center;
 	    	font-color: black;
@@ -174,7 +133,7 @@
 
 	    }
 	    #feature{
-	    	border-top: solid black;
+	    	
 	    	font-family: sans-serif;
 	    	float:center;
 	    	font-color: black;
@@ -182,9 +141,10 @@
 
 	    }
 	    footer {
-
-    		background-color:f333;
-    		color:black;
+    		background-color:#333;
+			font-family: sans-serif;
+    		font-size: 15px;
+    		color:white;
     		clear:both;
     		text-align:center;
     		float:center;
@@ -193,23 +153,30 @@
 		</style>
 		
 	</head>
+<body class = "body">
+	<hearder id=header>
+	<h1>BEST Electronics</h1>
 
-<body id ="body">
-	<div class = "header">
-		<div class="row1">
-			<div class="grid_12">
-				<h1 class=companyname> E-COMMERCE </h1>
-					<h3><span class = "span_d" >We are Best Sellers </span></h3>
-					<nav class = "navi">
-						<ul class = "menu">  
-							<li><a href = " home.html"> HOME </a></li>
-							<li> <a href = "Projets.html"> Project</a></li>
-							<li> <a href = "Business.html"> Business</a></li>							 
-						</ul>	
-					</nav>
-			</div>
-		</div>
-	</div>
+  <nav><ul>
+    <li><a href="">HOME</a></li>
+    <li><a href="">ABOUT</a></li>
+    <li class="dropdown">
+    <a href="#" class="dropbtn">PRODUCTS</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    </li>
+    <li><a href="">CONTACT</a></li>
+  </ul>
+  </nav>   
+ </hearder>
+  <div class ="pagebanner">
+  	<!-- <h1 class="title-banner">Cellphones</h1> -->
+  	<img src="img/ebanner.jpg" alt="cellphone_banner" >
+  </div>
+ 
 	<div id="row2">
 		<ul>
 			<li><a href="index.html">Home</a></li>
@@ -218,14 +185,12 @@
     		<li> > </li>
     		<li class="active">Now</li>
 		</ul>
-
 	</div>
 	<div id = "row3">
 		<section id = "info">
-		<div id = "col2">
 			<table id = "product_detail">
-				<tr><h3>Price: 299</h3></tr>
-				<tr><h3>Free Shipping</h3></tr>
+				<tr><h3 id = "price">Price: 299</h3></tr>
+				<tr><h3 id = "ship">Free Shipping</h3></tr>
 				<tr><img id ="buy" src = "/Users/jessicazeng1127/137/product_detials/img/buy.jpg" alt = "buy now" style = "width:170px;height:80px;"></tr>
 				<tr><p id = "details"> 4.7-inch Retina HD display with 3D Touch. 7000 series aluminum and stronger cover glass. An A9 chip with 64-bit desktop-class architecture. All new 12MP iSight camera with Live Photos. Touch ID. Faster LTE and Wi-Fi. Long battery life and iOS 9 and iCloud. All in a smooth, continuous unibody design.</p>
 				</tr>
@@ -238,20 +203,19 @@
 					<p>4K video recording at 30 fps and slo-mo video recording for 1080p at 120 fps</p>
 				</div>
 			</table>
-		</div>
 		</section>
 		<section id = "picture">
-			<div id = "col1">
-			<img src= "/Users/jessicazeng1127/137/product_detials/img/iphone6s.jpg" alt = "iphone 6s" style= "width:500px;height:600px;">
-			</div>
+			
+			<img src= "/Users/jessicazeng1127/137/product_detials/img/iphone6s.jpg" alt = "iphone 6s" style= "width:500px;height:550px;">
+			
 		</section>
 	</div>
-</body>
+
 	
 <footer>
 	<h5> 2016 E-BestMart.com, all rights reserved.</h5>
 </footer>
 
 
-
+</body>
 </html>
