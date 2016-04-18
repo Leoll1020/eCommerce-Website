@@ -1,7 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <style>
+
+.body{
+        width:80%;
+        overflow: auto;
+        margin: auto;
+        background-color:rgb(220,220,220);
+    }
+
+.footer{
+   padding:5px;
+   background-color: #333;
+  bottom: 0;
+  color:white;
+  clear:both;
+  text-align:center;
+  position: relative; 
+  width:870px;
+  margin: 20px auto 0 auto;
+
+}
+
+#header{
+    
+ 
+    font-family: "Open Sans", Arial, sans-serif;
+    text-align: left;
+    padding:20px;
+}
+nav ul {
+    list-style-type: none;
+   
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+  
+/* Change the link color to #111 (black) on hover */
+/*nav li a:hover {
+    background-color: #111;
+}*/
+
+nav li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+nav li a:hover, .dropdown:hover .dropbtn {
+    background-color: gray;
+
+}
+
+nav li.dropdown {
+    display: inline-block;
+    
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 360px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+nav .dropdown-content a.dd{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav .dropdown-content a:hover {background-color: #f1f1f1;  }
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+    overflow:visible;
+    z-index:100;
+}
+
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -57,12 +149,26 @@ select{
 
 </head>
 <body style="background-color:rgb(220,220,220)">
+<div class=body>
+<hearder id=header>
+    <h1>BEST Electronics</h1>
+</hearder>
+  <nav><ul>
+    <li><a href="Homepage.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="dropdown">
+    <a href="#" class="dropbtn">Products</a>
+    </li>
+  
+  </nav></ul> 
+</div>
 
 <h1 id="top_text">Thank you for choosing our business!</h1>
 <h3 id="second_text">Please fill out the order information and a confirmation email will be sent to you soon.</h3>
 
 <div style="width: 800px; margin: 50px auto 0 auto;">
   <form name="order_form"  method="POST">
+    <p>Product number (ex: #10, #37 etc):</p><input type="text" id="prd" name="prd" required>
     <p>Your full name:</p><input type="text" id="fname" name="firstname" required>
     <p>Your email address:</p><input type="text" id="email" name="email" required>
     <p>Your home address:</p><input type="text" id="homeadd" name="homeadd" required>
@@ -94,6 +200,11 @@ select{
 	
   </form>
 </div>
+
+	
+	   <p class="footer" > 2016 E-BestMart.com, all rights reserved.</p>
+
+
 <script>
 
 	function submitform(){
@@ -102,7 +213,10 @@ select{
 
 	function check(){
 	var reg = "/(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/";
-	if (document.getElementById('fname').value==""){
+	if (document.getElementById('prd').value=="" || document.getElementById('prd').value.search('#')==-1){
+		alert("You have to input a valid product number.");
+	}
+	else if(document.getElementById('fname').value==""){
 		alert("You have to input a name.");
 	}
 	else if (document.getElementById('email').value=="" || document.getElementById('email').value.search('@')==-1){
