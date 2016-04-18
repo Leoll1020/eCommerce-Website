@@ -22,7 +22,6 @@
     
     div.img{
         margin: 4%;
-        border: 1px solid #ccc;
         float: left;
         width: 25%;
         height: 10%;
@@ -34,11 +33,7 @@
         width: 100%;
         height: 100%;
     }
-    div.desc{
-        font-family: "Trebuchet MS", Verdana, sans-serif;
-        padding: 15%;
-        text-align: center;
-    }
+    
     .body{
         width:80%;
         overflow: auto;
@@ -53,8 +48,7 @@
 }
 nav ul {
     list-style-type: none;
-   /*margin-top: -20px;
-    margin-left: -20px;*/
+   
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -114,17 +108,24 @@ nav .dropdown:hover .dropdown-content {
     z-index:100;
 }
 
-
-  
-}
-#footer{
-    display: table;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.footer{
+   padding:5px;
+   background-color: #333;
+  bottom: 0;
+  color:white;
+  clear:both;
+  text-align:center;
+  position: relative; 
 }
 * {box-sizing:border-box}
-body {font-family: Verdana,sans-serif;margin:0}
+body {font-family: 'Raleway', Helvetica, Arial, sans-serif;margin:0px;}
+
+#desc{
+    float:center;
+    position:absolute;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    margin:0px;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -188,7 +189,7 @@ body {font-family: Verdana,sans-serif;margin:0}
   width: 13px;
   margin: 0 2px;
   background-color: #bbb;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   display: inline-block;
   transition: background-color 0.6s ease;
 }
@@ -234,17 +235,17 @@ body {font-family: Verdana,sans-serif;margin:0}
 	<h1>BEST Electronics</h1>
 </hearder>
   <nav><ul>
-    <li><a href="">Home</a></li>
-    <li><a href="">About</a></li>
+    <li><a href="Homepage.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
     <li class="dropdown">
     <a href="#" class="dropbtn">Products</a>
     <div class="dropdown-content">
-      <a href="cellphone.html">Phones</a>
+      <a href="cellphone.html">Cell phones</a>
       <a href="laptop.html">Laptops</a>
       <a href="tablet.html">Tablets</a>
     </div>
     </li>
-    <li><a href="">Contact</a></li>
+  
   </nav></ul>   
 
 
@@ -309,18 +310,18 @@ function showSlides(n) {
 }
 </script>
 
-      <div class="section"> 
+<div class="section"> 
 <div id="body">
 		<div class="content">
 			
 				
-			<a href="/"><img src="img/phones.jpg" alt ="Phone" width="25%" height ="22%" title="Phone" hspace = "4%" vspace = "5%" align="left" ></a>
+			<a href="cellphone.html"><img src="img/phones.jpg" alt ="Phone" width="25%" height ="22%" title="Phone" hspace = "4%" vspace = "5%" align="left" ></a>
                        
 
-			<a href ="/"><img src="img/tablets_tag.jpg" alt ="Tablet" width="25%" height ="22%" title ="Tablet" hspace ="4%" vspace = "5%" align="left"></a>
+			<a href ="tablet.html"><img src="img/tablets_tag.jpg" alt ="Tablet" width="25%" height ="22%" title ="Tablet" hspace ="4%" vspace = "5%" align="left"></a>
                        
 
-			<a href ="/"><img src="img/laptops.jpg" alt ="Laptop" width="25%" height ="22%" title ="Laptop" hspace ="4%" vspace = "5%" align="left"></a>
+			<a href ="laptop.html"><img src="img/laptops.jpg" alt ="Laptop" width="25%" height ="22%" title ="Laptop" hspace ="4%" vspace = "5%" align="left"></a>
                        
 
 </div></div></div>
@@ -329,54 +330,51 @@ function showSlides(n) {
 
 	<div class="img">
 
-  		<a target="_blank" href="img_fjords.jpg">
+  		<a href="samgalacore.html">
 
     			<img src="img/galaxycore.jpg" alt="Iphone 6s" width="600" height="400">
 
   		</a>
   		
-		<div class="desc">Samsung Galaxy Core Prime No-Contract Cell Phone</div>
-	
+		
 	</div>
 
 
 	<div class="img">
 	
-  	<a target="_blank" href="img_forest.jpg">
+  	<a href="iphone6s.html">
 
     			<img src="img/iphone6s.jpg" alt="Iphone 6" width="600" height="400">
 
   		</a>
 
-	  	<div class="desc">iPhone 6s</div>
 
-		</div>
+	</div>
 
 	
 
 <div class="img">
 
-  		<a target="_blank" href="img_lights.jpg">
+  		<a  href="LG.html">
 
-    			<img src="img/LG2.jpg" alt="Iphone 5SE" width="600" height="400">
+    			<img src="img/LG2.jpg" alt="LG" width="600" height="400">
 
   		</a>
 
-  		<div class="desc">T-Mobile LG K7</div>
-
+  	
 		</div>
 
 
 
 	<div class="img">
 
-  		<a target="_blank" href="img_mountains.jpg">
+  		<a  href="S7.html">
 
-    			<img src="img/s7.jpg" alt="Samsung S6" width="600" height="400">
+    			<img src="img/s7.jpg" alt="Samsung S7-edge" width="600" height="400">
 
   		</a>
   		
-		<div class="desc">Samsung Galaxy S7 edge</div>
+	 
 
 		</div>
 
@@ -384,13 +382,13 @@ function showSlides(n) {
 
 	<div class="img">
   		
-		<a target="_blank" href="img_mountains.jpg">
+		<a  href="hpblack.html">
 
-    			<img src="img/laptop1.jpg" alt="Samsung S7" width="600" height="400">
+    			<img src="img/laptop1.jpg" alt="Hp black" width="600" height="400">
   		
 		</a>
   		
-		<div class="desc">HP Black Licorice 15.6" 15-F387WM Laptop PC</div>
+		
 	
 	</div>
 
@@ -398,13 +396,13 @@ function showSlides(n) {
 
 	<div class="img">
 
-		<a target="_blank" href="img_mountains.jpg">
+		<a  href="hpred.html">
 
-    			<img src="img/laptop2.jpg" alt="Ipad Pro 12" width="600" height="400">
+    			<img src="img/laptop2.jpg" alt="Hp red" width="600" height="400">
 
   		</a>
 
-  		<div class="desc">HP Flyer Red 15.6" 15-f272wm Laptop PC</div>
+  		
 	
 	</div>
 
@@ -412,13 +410,12 @@ function showSlides(n) {
 
 <div class="img">
 
-  		<a target="_blank" href="img_mountains.jpg">
+  		<a  href="acer.html">
 	
-    		<img src="img/laptop3.jpg" alt="Mac Book Pro" width="600" height="400">
+    		<img src="img/laptop3.jpg" alt="acer" width="600" height="400">
 	
   	</a>
 	
-  	<div class="desc">Acer Midnight Black 15.6" Aspire E5-521-26LT Laptop PC</div>
 	
 	</div>
 
@@ -426,99 +423,97 @@ function showSlides(n) {
 
 <div class="img">
 
-	  	<a target="_blank" href="img_mountains.jpg">
+	  	<a  href="dell.html">
 	
-    		<img src="img/laptop4.jpg" alt="Mac Book Air" width="600" height="400">
+    		<img src="img/laptop4.jpg" alt="Dell" width="600" height="400">
 	
   	</a>
 	
-  	<div class="desc">Dell Black 15.6" Inspiron i3552 Laptop PC</div>
-	
+  
 	</div>
 
 	
 
 <div class="img">
 	
-  	<a target="_blank" href="img_mountains.jpg">
+  	<a  href="acerdiamond.jpg">
 	
-    		<img src="img/laptop5.jpg" alt="Lenovo T410i" width="600" height="400">
+    		<img src="img/laptop5.jpg" alt="Acer Diamond" width="600" height="400">
 	
   	</a>
 	
-  	<div class="desc">Acer Diamond Black 15.6" Aspire ES1-512-C1PW Laptop PC</div>
-	
+  	
 	</div>
 
 	
 
 <div class="img">
 	
-  	<a target="_blank" href="img_mountains.jpg">
+  	<a  href="rca7.html">
 	
-    		<img src="img/tb1.jpg" alt="Lenovo Y410P" width="600" height="400">
+    		<img src="img/tb1.jpg" alt="RCA 7 Tablet 16GB Quad Core" width="600" height="400">
 	
   	</a>
 
-	  	<div class="desc">RCA 7" Tablet 16GB Quad Core</div>
+	  	
 
-		</div>
+	</div>
 
 
 
 	<div class="img">
 	
-  	<a target="_blank" href="img_mountains.jpg">
+  	<a href="rcavking.html">
 	
-    		<img src="img/tb2.jpg" alt="Ipad Pro 9.7" width="600" height="400">
+    		<img src="img/tb2.jpg" alt="RCA Viking" width="600" height="400">
 	
   	</a>
 	
-  	<div class="desc">RCA Viking Pro 10.1" 2-in-1 Tablet 32GB Quad Core</div>
+  	
 	
 	</div>
 
 		
 <div class="img">
 	
-  	<a target="_blank" href="img_mountains.jpg">
+  	<a  href="rca7withcase.html">
 	
-    		<img src="img/tb3.jpg" alt="Lenovo Y510P" width="600" height="400">
+    		<img src="img/tb3.jpg" alt="rca7withcase" width="600" height="400">
   				</a>
 
-  		<div class="desc">RCA 7" Tablet 16GB Quad Core includes Keyboard / Case</div>
+  	
+		</div>
+
+<div class="img">
+	
+  	<a href="Nextbook.html">
+	
+    		<img src="img/tb4.jpg" alt="Nextbook Flexx " width="600" height="400">
+  				</a>
+
+  	
 
 		</div>
 
 <div class="img">
 	
-  	<a target="_blank" href="img_mountains.jpg">
+  	<a  href="TG-TEK.html">
 	
-    		<img src="img/tb4.jpg" alt="Lenovo Y510P" width="600" height="400">
+    		<img src="img/tb5.jpg" alt="TG-TEK 16GB " width="600" height="400">
   				</a>
 
-  		<div class="desc">Nextbook Flexx 10.1" 2-in-1 Tablet 2/32GB Intel Quad Core Windows 10</div>
+  		
 
-		</div>
-
-<div class="img">
-	
-  	<a target="_blank" href="img_mountains.jpg">
-	
-    		<img src="img/tb5.jpg" alt="Lenovo Y510P" width="600" height="400">
-  				</a>
-
-  		<div class="desc">TG-TEK 16GB 10.1" Touchscreen Dual Camera WiFi Quad Core</div>
-
-		</div>
- 
+</div>
  
 
-  <div id="footer">
+
+  <div class="footer">
 	
-	<p text-align="center"> 2016 E-BestMart.com, all rights reserved.</p>
+	   <p text-align="center"> 2016 E-BestMart.com, all rights reserved.</p>
 
 	</div>
 
 </body>
+
 </html>
