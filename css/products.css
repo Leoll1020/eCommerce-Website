@@ -32,9 +32,9 @@
 
     div.add img{
         margin:3%;
-        float: left;
-        width:30%;
-        height:5%;
+        float: right;
+        width:35%;
+        height:3%;
     }
 
 #header{
