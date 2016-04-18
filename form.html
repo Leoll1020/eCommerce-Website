@@ -131,7 +131,7 @@ div {
     font-family: Arial, Helvetica; 
 }
 p{
-    font-family: Arial, Helvetica; 
+	font-family: Arial, Helvetica; 
 }
 select{
     width:12%;
@@ -149,22 +149,34 @@ select{
 
 </head>
 <body style="background-color:rgb(220,220,220)">
-
+<div class=body>
+<hearder id=header>
+    <h1>BEST Electronics</h1>
+</hearder>
+  <nav><ul>
+    <li><a href="Homepage.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li class="dropdown">
+    <a href="#" class="dropbtn">Products</a>
+    </li>
+  
+  </nav></ul> 
+</div>
 
 <h1 id="top_text">Thank you for choosing our business!</h1>
 <h3 id="second_text">Please fill out the order information and a confirmation email will be sent to you soon.</h3>
 
 <div style="width: 800px; margin: 50px auto 0 auto;">
   <form name="order_form"  method="POST">
-    <p>Product number (ex: #10, #37 etc):</p><input type="text" id="prd" name="prd" required>
+    <p>Product name:</p><input type="text" id="prd" name="prd" required>
     <p>Your full name:</p><input type="text" id="fname" name="firstname" required>
     <p>Your email address:</p><input type="text" id="email" name="email" required>
     <p>Your home address:</p><input type="text" id="homeadd" name="homeadd" required>
     <p>Quntity of the product:</p>
     <select id="qnt" name="qnt">
-        <option value="qnt">1</option>
-        <option value="qnt">2</option>
-        <option value="qnt">3</option>
+    	<option value="qnt">1</option>
+    	<option value="qnt">2</option>
+    	<option value="qnt">3</option>
         <option value="qnt">4</option>
         <option value="qnt">5</option>
         <option value="qnt">6</option>
@@ -176,53 +188,57 @@ select{
     <p></p>
     
     <li id="cc">
-    <h2>Credit card information:</h2>
-    <p>Card number:</p><input type="text" id="ccn" name="ccn" required>
-    <p>Name on the card:</p><input type="text" id="nc" name="nc" required>
-    <p>Expiration date (dd/mm/Year; For example:08/03/2018):</p><input type="text" id="ed" name="ed" required>
-    <p>Three-digit security number:</p><input type="text" id="ccn3" name="ccn3" required>
+	<h2>Credit card information:</h2>
+	<p>Card number:</p><input type="text" id="ccn" name="ccn" required>
+	<p>Name on the card:</p><input type="text" id="nc" name="nc" required>
+	<p>Expiration date (dd/mm/Year; For example:08/03/2018):</p><input type="text" id="ed" name="ed" required>
+	<p>Three-digit security number:</p><input type="text" id="ccn3" name="ccn3" required>
     </li>
     
   
     <br/><br/><input type="submit" value="Submit" onclick="check();"/>
-    
+	
   </form>
-</div>    
-       <p class="footer" > 2016 E-BestMart.com, all rights reserved.</p>
+</div>
+
+	
+	   <p class="footer" > 2016 E-BestMart.com, all rights reserved.</p>
+
+
 <script>
 
-    function submitform(){
-        window.open("mailto:clu10@uci.edu?subject=Your%20order%20confirmation&body=Your%20order%20will%20be%20shipped%20in%20two%20business%20days.");
+	function submitform(){
+		window.open("mailto:clu10@uci.edu?subject=Your%20order%20confirmation&body=Your%20order%20will%20be%20shipped%20in%20two%20business%20days.");
 }
 
-    function check(){
-    var reg = "/(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/";
-    if (document.getElementById('prd').value=="" || document.getElementById('prd').value.search('#')==-1){
-        alert("You have to input a valid product number.");
-    }
-    else if(document.getElementById('fname').value==""){
-        alert("You have to input a name.");
-    }
-    else if (document.getElementById('email').value=="" || document.getElementById('email').value.search('@')==-1){
-        alert("You have to input a valid email.")}
-    else if (document.getElementById('homeadd').value==""){
-        alert("You have to input a valid home address.")}
-    else if (document.getElementById('ccn').value=="" || document.getElementById('ccn').value.length!=16){
-        alert("You have to input a valid credit card number.")}
-    else if (document.getElementById('nc').value==""){
-        alert("You have to input a valid name on the card.")}
-    else if (document.getElementById('ed').value=="" || (document.getElementById('ed').value.match(reg))==false){
-        alert("You have to input a valid expiration date.")}
-    
-    else if ((document.getElementById('ccn3').value=="") || (document.getElementById('ccn3').value.length!=3)){
-        alert("You have to input a valid three-digit security number.")}
-    else{
-        submitform();
-    }
+	function check(){
+	var reg = "/(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/";
+	if (document.getElementById('prd').value==""){
+		alert("You have to input a valid product number.");
+	}
+	else if(document.getElementById('fname').value==""){
+		alert("You have to input a name.");
+	}
+	else if (document.getElementById('email').value=="" || document.getElementById('email').value.search('@')==-1){
+		alert("You have to input a valid email.")}
+	else if (document.getElementById('homeadd').value==""){
+		alert("You have to input a valid home address.")}
+	else if (document.getElementById('ccn').value=="" || document.getElementById('ccn').value.length!=16){
+		alert("You have to input a valid credit card number.")}
+	else if (document.getElementById('nc').value==""){
+		alert("You have to input a valid name on the card.")}
+	else if (document.getElementById('ed').value=="" || (document.getElementById('ed').value.match(reg))==false){
+		alert("You have to input a valid expiration date.")}
+	
+	else if ((document.getElementById('ccn3').value=="") || (document.getElementById('ccn3').value.length!=3)){
+		alert("You have to input a valid three-digit security number.")}
+	else{
+		submitform();
+	}
 }
 
 
-    
+	
 </script>
 
 </body>
