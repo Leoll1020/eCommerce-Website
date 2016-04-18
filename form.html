@@ -168,7 +168,7 @@ select{
 
 <div style="width: 800px; margin: 50px auto 0 auto;">
   <form name="order_form"  method="POST">
-    <p>Product number (ex: #10, #37 etc):</p><input type="text" id="prd" name="prd" required>
+    <p>Product name:</p><input type="text" id="prd" name="prd" required>
     <p>Your full name:</p><input type="text" id="fname" name="firstname" required>
     <p>Your email address:</p><input type="text" id="email" name="email" required>
     <p>Your home address:</p><input type="text" id="homeadd" name="homeadd" required>
@@ -213,7 +213,7 @@ select{
 
 	function check(){
 	var reg = "/(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/";
-	if (document.getElementById('prd').value=="" || document.getElementById('prd').value.search('#')==-1){
+	if (document.getElementById('prd').value==""){
 		alert("You have to input a valid product number.");
 	}
 	else if(document.getElementById('fname').value==""){
