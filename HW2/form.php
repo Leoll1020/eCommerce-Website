@@ -1,11 +1,13 @@
 <?php
 
-require_once "pdo_Leo_Lu.php";
-if (isset($_POST['prd']) && isset($_POST['firstname'])&& isset($_POST['email'])&& isset($_POST['homeadd'])&& isset($_POST['qnt'])
+require_once("pdo_Leo_Lu.php");
+
+
+if (isset($_POST['prd']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['homeadd']) && isset($_POST['qnt'])
       && isset($_POST['ste'])) {
-    $sql = "INSERT INTO order_info (product_name, customer_name, email, home_address, quantity, state) VALUES (:product_name, :customer_name, :email, :home_address, :quantity, :state)";
+    $sql = "INSERT INTO order_info (product_name, customer_name, email, home_address, quantity, state) VALUES ('" . $_POST['prd'] ."','" . $_POST['firstname'] ."','" . $_POST['email'] ."','" . $_POST['homeadd'] ."','" . $_POST['qnt'] ."','" . $_POST['ste'] ."')";
     echo("<pre>\n".$sql."\n</pre>\n");
-    $stmt = $pdo->prepare($sql);
+    $stmt = $conn->prepare($sql);
     $stmt->execute(array(
         ':product_name' => $_POST['prd'],
         ':customer_name' => $_POST['firstname'],
@@ -15,6 +17,7 @@ if (isset($_POST['prd']) && isset($_POST['firstname'])&& isset($_POST['email'])&
         ':state' => $_POST['ste']));
 }
 ?>
+
 
 <html>
 <head>
