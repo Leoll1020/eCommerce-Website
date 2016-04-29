@@ -14,13 +14,12 @@ catch(PDOException $e)
     }
 ?>
 
-	<?php
+<?php
 
-	$pid = $_GET['productid'];
-	echo $pid;
+$pid = $_GET['productid'];
+echo $pid;
 
-
-	?>
+?>
 
 
 
@@ -68,6 +67,9 @@ catch(PDOException $e)
     		<li class="active">Now</li>
 		</ul>
 	</div>
+
+<div id = "row3">
+    <div id = "info">
 
 <?php
 
