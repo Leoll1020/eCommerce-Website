@@ -21,8 +21,9 @@ define('ABSPATH', dirname(__FILE__));
 $path = ABSPATH . '/ProductDetail.php?productid=';
 
 //echo $_SERVER['REQUEST_URI'];
+$pathToProduct = $_SERVER['REQUEST_URI'] . '?product=';
 
-$path2 = $_SERVER['REQUEST_URI'] . '?productid=';
+$pathToDetail = $_SERVER['REQUEST_URI'] . '?productid=';
 
 echo $path2;
 
@@ -59,9 +60,9 @@ echo $path2;
     <li class="dropdown">
     <a href="#" class="dropbtn">Products</a>
     <div class="dropdown-content">
-      <a href="cellphone.html">Cellphones</a>
-      <a href="laptop.html">Laptops</a>
-      <a href="tablet.html">Tablets</a>
+      <a href="/project2/ProductList.php?product=cellphone">Cellphones</a>
+      <a href="/project2/ProductList.php?product=laptop">Laptops</a>
+      <a href="/project2/ProductList.php?product=tablet">Tablets</a>
     </div>
     </li>
     <li><a href="Contact.html">Contact</a></li>
@@ -73,15 +74,21 @@ echo $path2;
   </div>
   <div class="section"> 
 
-  <header>
-    <h2>Laptops</h2>
-
-  </header>
-
 <?php
 
-$stmt = $conn->query("SELECT * FROM products where category = 'laptop'");
+$cate = $_GET['product'];
+
 ?>
+      
+<?php
+
+$stmt = $conn->query("SELECT * FROM products where category = '$cate'");
+?>
+     
+  <header>
+    <h2><?php echo $cate ?></h2>
+
+  </header>
 
 <?php
 while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
@@ -90,11 +97,13 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
   <div class ="table">
     <div class="row">
   
-        <img src="<?php echo $row['image']; ?>"/  alt="laptop1">
+        <a href="/project2/ProductDetail.php?productid=<?php echo $row['product_id'] ?>" >
+            <img src="<?php echo $row['image']; ?>" alt="laptop1">
+        </a>
 
         <div class="desc">
             <h4 class="title-heading">
-            <a href="/project2/ProductDetail.php?productid=<?php echo $row['product_id'] ?>"/ > <?php echo $row['product_name'] ?> </a>
+            <a href="/project2/ProductDetail.php?productid=<?php echo $row['product_id'] ?>" > <?php echo $row['product_name'] ?> </a>
             </h4>
           <div class="title-content"> 
             <h2><?php echo "$" . $row['price'] ?></h2>
