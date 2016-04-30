@@ -25,7 +25,7 @@ $pathToProduct = $_SERVER['REQUEST_URI'] . '?product=';
 
 $pathToDetail = $_SERVER['REQUEST_URI'] . '?productid=';
 
-echo $path2;
+
 
 // $base_url  = preg_replace("!^${doc_root}!", '', $base_dir); # ex: '' or '/mywebsite'
 // $protocol  = empty($_SERVER['HTTPS']) ? 'http' : 'https';
