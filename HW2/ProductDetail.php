@@ -18,6 +18,12 @@ catch(PDOException $e)
 
 $pid = $_GET['productid'];
 echo $pid;
+define('ABSPATH', dirname(__FILE__));
+$path = ABSPATH . '/ProductDetail.php?productid=';
+//echo $_SERVER['REQUEST_URI'];
+$path2 = $_SERVER['REQUEST_URI'] . '?productid=';
+echo $path2;
+ 
 
 ?>
 
@@ -86,7 +92,7 @@ $stmt = $conn->query("SELECT * FROM products where product_id = $pid");
 				<tr><h1 id = "title"> <?php echo $row['product_name'] ?> </h1></tr>
 				<tr><h3 id = "price"><?php echo "Price $" . $row['price'] ?></h3></tr>
 				<tr><h3 id = "ship">Free Shipping</h3></tr>
-				<tr><a href = "form.html"><img id ="buy" src = "img/buy.jpg" alt = "buy now" style = "width:200px;height:80px;"></a></tr>
+				<tr><a href = "form.php?productid=<?php echo $row['product_id']?> "/><img id ="buy" src = "img/buy.jpg" alt = "buy now" style = "width:200px;height:80px;"></a></tr>
 				<tr><p id = "details"><?php echo $row['description'] ?></p>
 				</tr>
 				<tr><h4 id = "feature_title">Product Features</h4>
