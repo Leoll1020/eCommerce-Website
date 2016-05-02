@@ -192,7 +192,7 @@ select{
   $result = $conn->query("SELECT name FROM customer");
   while ($crow = $result->fetch(PDO::FETCH_ASSOC)){
       $name = $crow['name'];
-      echo $name."\n";
+      
       $namearray[] = $name;        
   }
  ?>
@@ -274,10 +274,9 @@ select{
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script>
+  <script type = "text/javascript">
   $(function() {
-     
-    var availableTags = "<?php ($namearray)?>";
+    var availableTags = <?php echo json_encode($namearray);?>;
     $( "#fname" ).autocomplete({
       source: availableTags
     });
