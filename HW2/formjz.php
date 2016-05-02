@@ -1,4 +1,4 @@
-?php
+<?php
 $servername = "sylvester-mccoy-v3";
 $username = "inf124grp33";
 $password = "pux=C2ur";
