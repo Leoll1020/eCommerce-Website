@@ -15,30 +15,24 @@ catch(PDOException $e)
    
 
 ?>
-<?php
- $pid = $_GET['productid'];
- ?>
-
 
 <?php
-if (isset($_POST['prd']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['homeadd']) && isset($_POST['qnt'])
-      && isset($_POST['ste'])) {
-    $sql = "INSERT INTO order_info (product_name, customer_name, email, home_address, quantity, state) VALUES ('" . $_POST['prd'] ."','" . $_POST['firstname'] ."','" . $_POST['email'] ."','" . $_POST['homeadd'] ."','" . $_POST['qnt'] ."','" . $_POST['ste'] ."')";
-    echo("<pre>\n".$sql."\n</pre>\n");
-    $stmt = $conn->prepare($sql);
-    $stmt->execute(array(
-        ':product_name' => $_POST['prd'],
-        ':customer_name' => $_POST['firstname'],
-        ':email' => $_POST['email'],
-        ':home_address' => $_POST['homeadd'],
-        ':quantity' => $_POST['qnt'],
-        ':state' => $_POST['ste']));
+$pid = $_GET['productid'];
+$stmt = $conn->query("SELECT * FROM products where product_id = $pid");
+$stmt->execute();
+$rows = $stmt->fetchAll();
+foreach ($rows as $row){
+    $pName = $row['product_name'];
+    $pPrice = $row['price'];
+    // echo $pName;
+    // echo $pPrice;
 }
+
 ?>
 
+
+
 <?php
-
-
 
 $zipCode = (int)$_POST['zipcode'];
 
@@ -49,13 +43,40 @@ $rows = $stmt->fetchAll();
 foreach ($rows as $row){
     echo $row['tax_rate'];
 }
+
+
+
 ?>
 
+<?php
+$fullName = (!empty($_POST['fname']) ? $_POST['fname'] : '');
+$email = (!empty($_POST['email']) ? $_POST['email'] : '');
+$address = (!empty($_POST['homeadd']) ? $_POST['homeadd'] : '');
+$quantity = (!empty($_POST['qnt']) ? (int)$_POST['qnt'] : 1);
+
+$state = (!empty($_POST['ste']) ? $_POST['ste'] : '');
+
+try {
+
+    // Set SQL
+    $sql = "INSERT INTO order_info (product_name, customer_name, email, home_address, quantity, state) 
+            VALUES (:pName, :fullName, :email, :address, :quantity, :state)";
+    // Prepare query
+    $stmt = $conn->prepare($sql);
+    // Execute query
+    $stmt->execute(array(
+        ':pName' => $pName, 
+        ':fullName' => $fullName,
+        ':email' => $email,
+        ':address' => $address,
+        ':quantity' => $quantity,
+        ':state' => $state
+        ));
+} catch (PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
 
 ?>
-
-
-
 
 
 <!DOCTYPE html>
@@ -196,16 +217,11 @@ select{
 
 <h1 id="top_text">Thank you for choosing our business!</h1>
 <h3 id="second_text">Please fill out the order information and a confirmation email will be sent to you soon.</h3>
-<?php
- $stmt= $conn->query("SELECT * FROM products where product_id = $pid")
-?>
 
-<?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){ ?>
 <div style="width: 800px; margin: 50px auto 0 auto;">
   <form name="order_form"  method="POST">
-      <p>Product name:</p> <h3><?php echo $row['product_name']?></h3>
-      <p> Price: </p> <h3><?php echo '$'.$row['price']?></h3>
-    <p>Your full name:< /p><input type="text" id="fname" name="firstname" required>
+
+    <p>Your full name:</p><input type="text" id="fname" name="fname" required>
     <p>Your email address:</p><input type="text" id="email" name="email" required>
     <p>Your home address:</p><input type="text" id="homeadd" name="homeadd" required>
     <p>Quantity of the product:</p>
@@ -237,7 +253,7 @@ select{
     <p>Three-digit security number:</p><input type="text" id="ccn3" name="ccn3" required>
     </li>
     
-<?php } ?>
+
     <br/><br/><input type="submit" value="Submit" onclick="check();"/>
     
   </form>
