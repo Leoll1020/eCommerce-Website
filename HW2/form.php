@@ -220,29 +220,25 @@ select{
 
 <div style="width: 800px; margin: 50px auto 0 auto;">
   <form name="order_form"  method="POST">
-
+    <p><?php echo $pName ?></p>
+    <p><?php echo "$" . $pPrice ?></p>
     <p>Your full name:</p><input type="text" id="fname" name="fname" required>
     <p>Your email address:</p><input type="text" id="email" name="email" required>
     <p>Your home address:</p><input type="text" id="homeadd" name="homeadd" required>
     <p>Quantity of the product:</p>
     <select id="qnt" name="qnt">
-        <option value="qnt">1</option>
-        <option value="qnt">2</option>
-        <option value="qnt">3</option>
-        <option value="qnt">4</option>
-        <option value="qnt">5</option>
-        <option value="qnt">6</option>
-        <option value="qnt">7</option>
-        <option value="qnt">8</option>
-        <option value="qnt">9</option>
-        <option value="qnt">10</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
     </select>
-    <p>State:</p>
-    <select id="ste" name="ste">
-        <option value="ste">CA</option>
-        <option value="ste">other</option>
-    </select>
-    <p></p>
+    <p>State (For example CA):</p><input type="text" id="ste" name="ste" required>
 
     <p>Zipcode:</p><input type="text" id="zipcode" name="zipcode" required>
     <li id="cc">
