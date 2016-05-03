@@ -324,11 +324,12 @@ function doMath(){
 
     var price = <?php echo $pPrice; ?>;
     var zip_code = parseInt(document.getElementById('zipcode').value);
-    var total = quantity * price
+    var tax_rate = 0.08;
+    var total = quantity * price + quantity * price * tax_rate
     
     
     document.getElementById('total_price').value = total;
-    document.getElementById('total_prices').innerHTML = "Total Price : " + total;
+    document.getElementById('total_prices').innerHTML = "Total Price : $" + total;
     
   
     
